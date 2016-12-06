@@ -1,0 +1,155 @@
+html, body, div, h1, h2, h3, h4, h5, h6, p, img, dl, dt, dd, ol, ul, li, table, tr, td, form, object,
+ embed, article, aside, canvas, command, details, fieldset, figcaption, figure, footer, group,
+ header, hgroup, legend, mark, menu, meter, nav, output, progress, section, summary, time, audio,
+ video {
+ margin: 0;
+ padding: 0;
+ border: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+ display: block;
+}
+
+html, body, table, input, textarea {
+ font: 12px/18px "Roboto", sans-serif;
+ line-height: 1.42857;
+ color: #333;
+ direction: ltr;
+}
+
+html, body {
+ height: 100%;
+ min-width: 100%;
+ position: absolute;
+ background: none repeat scroll 0 0 #FFF;
+}
+
+ol, ul {
+ list-style: none;
+ line-height: 17px;
+}
+
+a:link, a:visited a:active {
+ text-decoration: none;
+ outline: none;
+}
+
+a {
+ color: #08C;
+}
+
+a:hover {
+ text-decoration: underline;
+}
+
+p {
+ display: block;
+}
+
+h2 {
+ padding-bottom: 15px;
+ font-size: 24px;
+}
+
+i {
+ vertical-align: middle;
+}
+
+textarea {
+ resize: vertical;
+}
+
+.vam {
+ vertical-align: middle;
+}
+
+.lfloat {
+ float: left;
+}
+
+.rfloat {
+ float: right;
+}
+
+.ralign {
+ text-align: right;
+}
+
+.oln {
+ outline: medium none;
+}
+
+.hrb-lg {
+ border-bottom: 1px solid #D5D5D5;
+}
+
+.hrt {
+ border-top: 1px solid #D5D5D5;
+}
+
+.table {
+ display: table;
+}
+
+.pbs {
+ padding-bottom: 5px;
+}
+
+.pv10 {
+ padding-bottom: 1rem;
+ padding-top: 1rem;
+}
+
+.pl {
+ padding: 20px;
+}
+
+.mlm {
+ margin-left: 10px;
+}
+
+.mtm {
+ margin-top: 10px;
+}
+
+.mbm {
+ margin-bottom: 10px;
+}
+
+.mrm {
+ margin-right: 10px;
+}
+
+.mbm5 {
+ margin-bottom: 5px;
+}
+
+.bdt {
+ border: 1px dotted #333;
+}
+
+.bold {
+ font-weight: bold;
+}
+
+.clearfix, .clear {
+ clear: both;
+}
+
+.clearfix::after {
+ clear: both;
+ content: " ";
+ display: block;
+ height: 0;
+ visibility: hidden;
+}
+
+.clearfix::before, .clearfix::after {
+ content: " ";
+ display: table;
+}
+
+.error {
+ color: red;
+}
