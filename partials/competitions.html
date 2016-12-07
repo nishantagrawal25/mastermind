@@ -1,0 +1,12 @@
+<div>
+{{$scope.competitions}}
+	<table ng-table="" class="table table-bordered">
+		<tr ng-repeat="competition in competitions track by $index">
+			<td data-title="'Competition'">
+				<a ng-click = "getLeagueTable(competition.id)" href="#/competition/{{competition.id}}">{{competition.caption}}</a>
+			</td>
+			<td data-title="'League'">{{competition.league}}</td>
+			<td data-title="'Year'">{{competition.year}}</td>
+		</tr>
+	</table>
+</div>

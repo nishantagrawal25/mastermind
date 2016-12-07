@@ -1,0 +1,12 @@
+<div ng-controller="FixturesCtrl">
+	<table class="table table-bordered" ng-table="">
+		<tr ng-repeat="fixture in fixtures | filter: customFunction | orderBy : date | limitTo : 5">
+			<td data-title="'Date'">{{fixture.date | date : 'longDate'}}</td>
+			<td data-title="'Match'">{{fixture.homeTeamName}} <span class="bold">VS</span> {{fixture.awayTeamName}}</td>
+		</tr>
+	</table>
+
+
+
+
+</div>

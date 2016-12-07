@@ -1,0 +1,14 @@
+<div ng-cloak>
+ <div class="team-data">
+  <h3>{{teamData.name}}</h3>
+   <tabset>
+    <tab ng-repeat="tab in tabs" active="tab.active" select="setIdx($index)">
+     <tab-heading>
+      <span style="font-weight:bold;">{{$index+1}}.</span>
+      {{tab.title}}
+     </tab-heading>
+     <div ng-include='tab.content' class="team-data"></div>
+    </tab>
+   </tabset>
+ </div>
+</div>

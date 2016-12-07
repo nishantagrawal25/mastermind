@@ -1,0 +1,39 @@
+<div>
+	<h1>
+		{{standing.leagueCaption}}
+	</h1><br/>
+	<div ng-if="standing.standings" ng-repeat="(key, value) in standing.standings" class="">
+		<h3>Group {{key}}</h3>
+		<table class="table table-bordered" ng-table="">
+			<tr ng-repeat="club in value">
+				<td data-title="'Position'">{{club.rank}}</td>
+				<td data-title="'Club'">{{club.team}}</td>
+				<td data-title="'Played'">{{club.playedGames}}</td>
+				<td data-title="'GF'">{{club.goals}}</td>
+				<td data-title="'GA'">{{club.goalsAgainst}}</td>
+				<td data-title="'GD'">{{club.goalDifference}}</td>
+				<td data-title="'Points'">{{club.points}}</td>
+			</tr>
+		</table>
+	</div>
+	<div ng-if="standing.standing">
+		<table class="table table-bordered" ng-table="">
+			<tr ng-repeat="club in standing.standing">
+				<td data-title="'Position'">{{club.position}}</td>
+				<td data-title="'Club'">
+					<a class="hover" ng-click="getTeamDetails(club)">{{club.teamName}}</a>
+				</td>
+				<td data-title="'Played'">{{club.playedGames}}</td>
+				<td data-title="'Won'">{{club.wins}}</td>
+				<td data-title="'Drawn'">{{club.draws}}</td>
+				<td data-title="'Lost'">{{club.losses}}</td>
+				<td data-title="'Points'">{{club.points}}</td>
+				<td data-title="'GF'">{{club.goals}}</td>
+				<td data-title="'GA'">{{club.goalsAgainst}}</td>
+				<td data-title="'GD'">{{club.goalDifference}}</td>
+			</tr>
+		</table>
+	</div>
+	
+
+</div>
