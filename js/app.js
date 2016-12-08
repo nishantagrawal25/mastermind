@@ -1,4 +1,4 @@
-var app = angular.module('app', [ 'controllers', 'services', 'ngRoute', 'ui.bootstrap', 'ngTable', ]);
+var app = angular.module('app', ['services', 'ngRoute', 'ui.bootstrap', 'ngTable' ]);
 
 app.config([ '$routeProvider', '$httpProvider', function($routeProvider){
   $routeProvider.when('/competitions', {
@@ -16,19 +16,22 @@ app.config([ '$routeProvider', '$httpProvider', function($routeProvider){
 
 }]);
 
-app.filter('spaceless',function(){
-    return function(input){
-        return input.replace(' ','-');
-    }
-});
-
-
-
-app.controller('AppCtrl', ['$scope', 'utils', function($scope, utils){
-  
-  
-
-} ]);
+app.directive('countdown', ['$interval', 'utils', function ($interval, utils) {
+      return {
+          restrict: 'A',
+          scope: { date: '@' },
+          link: function (scope, element) {
+              var future;
+              future = new Date(scope.date);
+              $interval(function () {
+                  var diff;
+                  diff = Math.floor((future.getTime() - new Date().getTime()) / 1000);
+                  return element.text(utils.dhms(diff));
+              }, 1000);
+          }
+      };
+  }
+])
 
 app.controller('CompetitionsCtrl', ['$scope', 'utils', function($scope, utils){
 

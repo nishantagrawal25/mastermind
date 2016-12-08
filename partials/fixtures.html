@@ -3,6 +3,9 @@
 		<tr ng-repeat="fixture in fixtures | filter: customFunction | orderBy : date | limitTo : 5">
 			<td data-title="'Date'">{{fixture.date | date : 'longDate'}}</td>
 			<td data-title="'Match'">{{fixture.homeTeamName}} <span class="bold">VS</span> {{fixture.awayTeamName}}</td>
+			<td data-title="'Time Remaining'">
+				<span countdown='' date='{{fixture.date}}'>&nbsp;</span>
+			</td>
 		</tr>
 	</table>
 
